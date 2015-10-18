@@ -14,6 +14,13 @@ public:
 		account_number = "0";
 		balance = 0;
 	}
+	BankAccount(string client_name,string account_num,float amount)
+	{
+		name = client_name;
+		account_number = account_num;
+		balance = amount;
+	}
+
 	//-------------------------
 	void set_name(string str_in) { name = str_in; }
 	void set_account_number(string str_in) { account_number = str_in; }
@@ -30,11 +37,16 @@ public:
 
 int main()
 {
+	BankAccount client1("Muhammad Nashaat","M0123456",1000);
+	/*
+	//-----> using the default constructor
+
 	BankAccount client1;
 	client1.set_name("Muhammad Nashaat");
 	client1.set_account_number("M0123456");
 	client1.set_balance(1000);
-
+	*/
+	
 	client1.deposite(500.5);
 	client1.withdraw(100);
 
